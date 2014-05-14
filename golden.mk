@@ -50,6 +50,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# Force disable softkeys lights and BLN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init.d/66led_OFF:system/etc/init.d/66led_OFF
+
 # Graphics
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/lib/egl/egl.cfg:system/lib/egl/egl.cfg
