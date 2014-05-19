@@ -15,9 +15,15 @@
 # limitations under the License.
 #
 
+## Specify phone tech before including full_phone
+$(call inherit-product, vendor/slim/config/gsm.mk)
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
 # Inherit from Slim custom product configuration
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
-$(call inherit-product, vendor/slim/config/gsm.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/golden/golden.mk)
