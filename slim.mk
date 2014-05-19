@@ -15,15 +15,15 @@
 # limitations under the License.
 #
 
-# Inherit from Omni custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+# Inherit from Slim custom product configuration
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+$(call inherit-product, vendor/slim/config/gsm.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/golden/golden.mk)
 
 # Device identifier
-PRODUCT_NAME := omni_golden
+PRODUCT_NAME := slim_golden
 PRODUCT_DEVICE := golden
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung

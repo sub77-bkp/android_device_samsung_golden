@@ -186,7 +186,7 @@ PRODUCT_PACKAGES += \
 
 # Misc packages
 PRODUCT_PACKAGES += \
-    OmniTorch \
+    Torch \
     com.android.future.usb.accessory
 
 # Non-device-specific props
