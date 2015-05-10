@@ -159,7 +159,6 @@ PRODUCT_PACKAGES += \
 
 # Misc packages
 PRODUCT_PACKAGES += \
-    Torch \
     com.android.future.usb.accessory
 
 # We have enough storage space to hold precise GC data
