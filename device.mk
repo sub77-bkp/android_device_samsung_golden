@@ -16,7 +16,8 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+# AOSP specific overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/aosp
 
 # Define kind of DPI
 PRODUCT_AAPT_CONFIG := normal hdpi

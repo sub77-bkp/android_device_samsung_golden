@@ -16,6 +16,9 @@
 # limitations under the License.
 #
 
+# SlimRoms specific overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/slim
+
 # Inherit GSM telephony parts
 $(call inherit-product, vendor/slim/config/gsm.mk)
 
