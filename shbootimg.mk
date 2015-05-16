@@ -1,6 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 LZMA_BIN := $(shell which lzma)
 
+TWRPFSTAB := $(LOCAL_PATH)/recovery/rootdir/etc/twrp.fstab
+
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES)
 	$(call pretty,"Target boot image: $@")
 	$(hide) $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
@@ -12,6 +14,7 @@ $(recovery_uncompressed_ramdisk): $(MINIGZIP) \
 	mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/lib/modules
 	cp -f $(TARGET_OUT)/lib/modules/j4fs.ko $(TARGET_RECOVERY_ROOT_OUT)/lib/modules/j4fs.ko
 	cp -f $(TARGET_OUT)/lib/modules/param.ko $(TARGET_RECOVERY_ROOT_OUT)/lib/modules/param.ko
+	cp -f $(TWRPFSTAB) $(TARGET_RECOVERY_ROOT_OUT)/etc/twrp.fstab
 	@echo -e ${CL_CYN}"----- Making uncompressed recovery ramdisk ------"${CL_RST}
 	$(MKBOOTFS) $(TARGET_RECOVERY_ROOT_OUT) > $@
 
