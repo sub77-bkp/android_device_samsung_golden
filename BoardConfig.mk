@@ -136,7 +136,6 @@ BOARD_SEPOLICY_DIRS += device/samsung/golden/sepolicy
 BOARD_SEPOLICY_UNION += \
     file_contexts \
     device.te \
-    domain.te \
     file.te \
     geomagneticd.te \
     init.te \
