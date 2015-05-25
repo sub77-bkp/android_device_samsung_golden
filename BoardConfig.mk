@@ -17,6 +17,7 @@
 #
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/golden/include
+PRODUCT_VENDOR_KERNEL_HEADERS := device/samsung/golden/kernel-headers
 TARGET_OTA_ASSERT_DEVICE := golden,i8190,GT-I8190,goldenxx
 
 # Board
