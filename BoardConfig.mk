@@ -149,7 +149,7 @@ BOARD_SEPOLICY_UNION += \
     zygote.te
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/golden/rootdir/fstab.samsunggolden
+TARGET_RECOVERY_FSTAB := device/samsung/golden/rootdir/etc/fstab.samsunggolden
 RECOVERY_FSTAB_VERSION := 2
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/musb-ux500.0/musb-hdrc/gadget/lun0/file"
