@@ -34,8 +34,8 @@ PRODUCT_COPY_FILES += \
 
 # Recovery ramdisk, libraries and modules.
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/rootdir/init.recovery.samsunggolden.rc:root/init.recovery.samsunggolden.rc \
-    $(LOCAL_PATH)/recovery/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/recovery/root/init.recovery.samsunggolden.rc:root/init.recovery.samsunggolden.rc \
+    $(LOCAL_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Inputs
 PRODUCT_COPY_FILES += \
