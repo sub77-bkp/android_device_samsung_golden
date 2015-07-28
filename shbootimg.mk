@@ -24,7 +24,7 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \
 		$(recovery_kernel) \
 		$(recovery_uncompressed_ramdisk) \
 		$(recovery_ramdisk)
-	@echo ----- Compressing recovery ramdisk using LZMA ------
+	@echo -e ${CL_CYN}"----- Compressing recovery ramdisk using LZMA ------"${CL_RST}
 	$(hide) rm -f $(OUT)/ramdisk-recovery.cpio.lzma
 	$(LZMA_BIN) $(recovery_uncompressed_ramdisk)
 	$(hide) cp $(recovery_uncompressed_ramdisk).lzma $(recovery_ramdisk)
