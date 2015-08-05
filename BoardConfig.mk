@@ -161,6 +161,8 @@ BOARD_UMS_LUNFILE := "/sys/devices/platform/musb-ux500.0/musb-hdrc/gadget/lun0/f
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/musb-ux500.0/musb-hdrc/gadget/lun%d/file"
 
 # TWRP Recovery defines
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_CUSTOM_THEME := device/samsung/golden/twres
 TW_HAS_MTP := true
 TW_BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/golden/recovery/twrp-graphics.c
 TW_THEME := portrait_mdpi
@@ -177,4 +179,22 @@ TW_INCLUDE_CRYPTO := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_CPU_TEMP := true
-TW_EXCLUDE_MTP := true
+#TW_EXCLUDE_MTP := true
+
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/samsung/golden/mr_init_devices.c
+MR_DPI := hdpi
+MR_DPI_MUL := 1
+MR_DPI_FONT := 160
+MR_FSTAB := device/samsung/golden/recovery/root/etc/twrp.fstab
+MR_USE_MROM_FSTAB := false
+# End of first RAM region is 0x05ffffff, so we set it to for example 0x03200000
+# End of first RAM region is 0x083fffff, so we set it to for example 0x06500000
+MR_KEXEC_MEM_MIN := 0x03200000
+MR_RD_ADDR := 0x02200000
+#MR_KEXEC_DTB := true
+#MR_PIXEL_FORMAT := "RGBX_8888"
+#MR_USE_QCOM_OVERLAY := true
+#MR_QCOM_OVERLAY_HEADER := device/samsung/matisse/mr_qcom_overlay.h
+#MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
+#MR_DEVICE_VARIANTS := matisse matissewifi matisse3g matisselte matissewifiue
